@@ -1,0 +1,115 @@
+.block {
+    height: 2rem;
+    line-height: 2rem;
+    width: 50%;
+    background: yellow;
+    color: black;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.animables {
+    /* iniciar animables ocultos */
+    visibility: hidden;
+    animation-play-state: paused;
+}
+
+.animado {
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 5s;
+    animation-play-state: running;
+}
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+
+    60% {
+        transform: translateX(20px);
+    }
+
+    80% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+
+    60% {
+        transform: translateX(-20px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animado.bounceIn {
+    animation-name: bounceIn;
+}
+
+.animado.bounceInLeft {
+    animation-name: bounceInLeft;
+}
+.animado.bounceInRight {
+    animation-name: bounceInRight;
+}
+.animado.fadeIn {
+    animation-name: fadeIn;
+}
+
+
